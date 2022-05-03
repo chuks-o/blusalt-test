@@ -1,6 +1,6 @@
 <template>
   <aside
-    class="flex flex-col pt-[30px] pb-[110px] w-[253px] min-h-screen bg-primary-300 overflow-y-auto"
+    class="flex flex-col pt-[30px] pb-[110px] w-[80%] md:w-[253px] min-h-screen bg-primary-300 overflow-y-auto"
   >
     <div class="flex justify-center mb-[37px] border-b border-[#ffffff1a] mx-5">
       <div class="pb-4">
