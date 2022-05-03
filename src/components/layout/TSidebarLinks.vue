@@ -1,17 +1,25 @@
 <template>
   <ul class="flex flex-col px-[13px]">
-    <li
-      class="flex items-center px-3 text-white h-9 mb-[28px] text-sm rounded-[5px]"
+    <router-link
       v-for="(item, index) in sidebarLinks"
       :key="index"
+      :to="{ name: item.name }"
+      v-slot="{ href, navigate, isActive }"
+      exact
     >
-      <router-link to="/">
-        <a href="#" class="flex">
+      <!-- :class="[
+          item.name === route.name &&
+            'bg-white bg-opacity-10 text-white border-r-[3px] border-white',
+        ]" -->
+      <li
+        class="flex items-center px-3 text-white h-9 mb-[28px] text-sm rounded-[5px]"
+      >
+        <a :active="isActive" :href="href" @click="navigate" class="flex">
           <component :is="item.icon"></component>
           <span class="text-sm ml-4 opacity-60">{{ item.title }}</span>
         </a>
-      </router-link>
-    </li>
+      </li>
+    </router-link>
   </ul>
 </template>
 
@@ -30,37 +38,37 @@ export default {
       {
         title: "Dashboard",
         icon: HomeIcon,
-        name: "",
+        name: "Home",
       },
       {
         title: "Requests",
         icon: RequestIcon,
-        name: "",
+        name: "Requests",
       },
       {
         title: "KYCs",
         icon: KYCIcon,
-        name: "",
+        name: "NotFound",
       },
       {
         title: "Reports",
         icon: ReportIcon,
-        name: "",
+        name: "NotFound",
       },
       {
         title: "Audit Trail",
         icon: AuditTrail,
-        name: "",
+        name: "NotFound",
       },
       {
         title: "Users",
         icon: UsersIcon,
-        name: "",
+        name: "NotFound",
       },
       {
         title: "Settings",
         icon: SettingIcon,
-        name: "",
+        name: "NotFound",
       },
     ];
 

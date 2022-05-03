@@ -8,9 +8,9 @@
         <t-inflow-statistics />
       </div>
 
-      <div
-        class="xl:col-span-1 bg-primary-300 h-96 w-full rounded-[10px]"
-      ></div>
+      <div class="xl:col-span-1 h-96 w-full">
+        <t-new-user-statistics />
+      </div>
     </div>
     <t-recent-requests />
   </div>
@@ -21,6 +21,7 @@
 import TStatisticsCard from "@/components/dashboard/TStatisticsCard.vue";
 import TRecentRequests from "@/components/dashboard/TRecentRequests.vue";
 import TInflowStatistics from "@/components/dashboard/TInflowStatistics.vue";
+import TNewUserStatistics from "@/components/dashboard/TNewUserStatistics.vue";
 
 export default {
   name: "Home",
@@ -28,6 +29,7 @@ export default {
     TStatisticsCard,
     TRecentRequests,
     TInflowStatistics,
+    TNewUserStatistics,
   },
 };
 </script>

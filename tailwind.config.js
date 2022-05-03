@@ -15,6 +15,7 @@ module.exports = {
           400: "#AAAAAA",
           500: "#BDBDBD",
           600: "#8392AB",
+          700: "#B9B9B9",
         },
         tdark: {
           100: "#171717",
