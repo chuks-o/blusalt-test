@@ -2,25 +2,25 @@
   <div class="bg-white rounded-xl shadow-card-shadow p-5 h-auto">
     <div class="md:flex items-start justify-between">
       <h3 class="font-semibold text-lg mb-1">User Inflow Statistics</h3>
-      <div class="flex px-10 space-x-8">
+      <div class="flex md:px-10 space-x-8 mb-4 md:mb-0">
         <div>
-          <p class="flex text-xs text-tgray-700">
+          <p class="flex text-xs text-tgray-700 mb-2">
             <span
-              class="h-3 w-3 mr-2 bg-purple-500 rounded-full flex flex-shrink-0"
+              class="h-3 w-3 mr-2 bg-tpurple-100 rounded-full flex flex-shrink-0"
             ></span>
             <span> AGENTS </span>
           </p>
-          <p class="font-bold text-tdark-100">475 273</p>
+          <p class="text-tdark-100 font-medium">475 273</p>
         </div>
 
         <div>
-          <p class="flex text-xs text-tgray-700">
+          <p class="flex text-xs text-tgray-700 mb-2">
             <span
               class="h-3 w-3 mr-2 bg-tgreen-100 rounded-full flex flex-shrink-0"
             ></span>
             <span> USERS </span>
           </p>
-          <p class="font-bold text-tdark-100">782 396</p>
+          <p class="font-medium text-tdark-100">782 396</p>
         </div>
       </div>
     </div>

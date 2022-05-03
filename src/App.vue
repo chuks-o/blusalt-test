@@ -4,12 +4,22 @@
     <div
       class="lg:fixed hidden lg:block lg:h-screen lg:top-0 lg:bottom-0 lg:left-0"
     >
-      <t-sidebar />
+      <TSidebar />
+    </div>
+
+    <div
+      :class="[
+        sidebarOpen ? '-translate-x-0' : '-translate-x-full',
+        'fixed lg:hidden z-40 w-full h-full transform transition duration-150 ease-in-out bg-black bg-opacity-40',
+      ]"
+      @click="toggleSidebar"
+    >
+      <TSidebar />
     </div>
 
     <main class="lg:ml-[253px] w-full">
       <!-- navbar -->
-      <t-navbar />
+      <TNavbar @toggle-mobile-nav="toggleSidebar" />
 
       <!-- view -->
       <div class="px-5 py-10 bg-tgray-100">
@@ -22,10 +32,20 @@
 <script>
 import TNavbar from "@/components/layout/TNavbar.vue";
 import TSidebar from "@/components/layout/TSidebar.vue";
+import { ref } from "vue";
 
 export default {
   components: { TSidebar, TNavbar },
   name: "App",
+
+  setup() {
+    const sidebarOpen = ref(false);
+    const toggleSidebar = () => {
+      sidebarOpen.value = !sidebarOpen.value;
+    };
+
+    return { sidebarOpen, toggleSidebar };
+  },
 };
 </script>
 

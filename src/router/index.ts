@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 
 const routes = [
@@ -8,44 +8,39 @@ const routes = [
     component: Home,
   },
   {
-    path: "/",
+    path: "/request",
     name: "Requests",
     component: Home,
   },
   {
-    path: "/",
+    path: "/kyc",
     name: "KYC",
     component: Home,
   },
   {
-    path: "/",
+    path: "/reports",
     name: "Reports",
     component: Home,
   },
   {
-    path: "/",
+    path: "/audit-trail",
     name: "AuditTrail",
     component: Home,
   },
   {
-    path: "/",
+    path: "/users",
     name: "Users",
     component: Home,
   },
   {
-    path: "/",
+    path: "/settings",
     name: "Settings",
-    component: Home,
-  },
-  {
-    path: "/:(.*)",
-    name: "NotFound",
     component: Home,
   },
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 });
 

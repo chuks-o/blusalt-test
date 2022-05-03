@@ -70,7 +70,7 @@
               </td>
               <td class="px-6">
                 <div
-                  class="flex items-center justify-center text-xs font-medium rounded-full h-[22px]"
+                  class="flex items-center justify-center text-xs px-3 w-fit font-medium rounded-full h-[22px]"
                   :class="{
                     'bg-yellow-100 text-yellow-500': item.status === 'Pending',
                     'bg-green-100 text-green-500': item.status === 'Active',
