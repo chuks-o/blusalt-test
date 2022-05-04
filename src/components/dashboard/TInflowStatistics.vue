@@ -4,7 +4,7 @@
       <h3 class="font-semibold text-lg mb-1">User Inflow Statistics</h3>
       <div class="flex md:px-10 space-x-8 mb-4 md:mb-0">
         <div>
-          <p class="flex text-xs text-tgray-700 mb-2">
+          <p class="flex text-xs text-tgray-700 mb-1.5">
             <span
               class="h-3 w-3 mr-2 bg-tpurple-100 rounded-full flex flex-shrink-0"
             ></span>
@@ -14,7 +14,7 @@
         </div>
 
         <div>
-          <p class="flex text-xs text-tgray-700 mb-2">
+          <p class="flex text-xs text-tgray-700 mb-1.5">
             <span
               class="h-3 w-3 mr-2 bg-tgreen-100 rounded-full flex flex-shrink-0"
             ></span>
@@ -54,7 +54,7 @@ export default defineComponent({
       },
       {
         name: "PRODUCT B",
-        data: [15, 25, 20, 40, 25, 15, 19],
+        data: [15, 45, 30, 40, 25, 15, 19],
       },
     ];
 
@@ -65,6 +65,9 @@ export default defineComponent({
         height: 350,
         zoom: {
           enabled: false,
+        },
+        toolbar: {
+          show: false,
         },
       },
       dataLabels: {
@@ -78,8 +81,8 @@ export default defineComponent({
         gradient: {
           shadeIntensity: 1,
           inverseColors: false,
-          opacityFrom: 0.45,
-          opacityTo: 0.05,
+          opacityFrom: 0,
+          opacityTo: 0,
           stops: [20, 100, 100, 100],
         },
       },
@@ -102,10 +105,12 @@ export default defineComponent({
         type: "category",
         categories: ["Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun"],
       },
+      colors: ["#5F2EEA", "#4BDE97"],
       title: {
         text: "Nov - July",
         align: "left",
         offsetX: -9,
+        offsetY: -6,
         style: {
           fontSize: "14px",
           fontWeight: "normal",
@@ -116,12 +121,6 @@ export default defineComponent({
       tooltip: {
         shared: true,
       },
-      // legend: {
-      //   // show: true,
-      //   position: "top",
-      //   horizontalAlign: "right",
-      //   offsetX: -10,
-      // },
       legend: {
         show: false,
       },

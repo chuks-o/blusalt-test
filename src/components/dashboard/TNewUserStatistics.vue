@@ -39,12 +39,16 @@ export default defineComponent({
       chart: {
         type: "bar",
         height: 350,
+        toolbar: {
+          show: false,
+        },
       },
       plotOptions: {
         bar: {
           horizontal: false,
           columnWidth: "25%",
           endingShape: "rounded",
+          borderRadius: 5,
         },
       },
       dataLabels: {
@@ -64,6 +68,12 @@ export default defineComponent({
             fontWeight: 600,
           },
         },
+        axisBorder: {
+          show: false,
+        },
+        axisTicks: {
+          show: false,
+        },
       },
       yaxis: {
         labels: {
@@ -73,9 +83,6 @@ export default defineComponent({
             fontWeight: 600,
           },
         },
-        // title: {
-        //   text: "$ (thousands)",
-        // },
       },
       fill: {
         opacity: 1,
